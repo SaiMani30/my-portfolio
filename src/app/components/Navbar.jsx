@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import Image from "next/image"; // Import the Image component
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -27,7 +28,12 @@ const Navbar = () => {
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#11071F] bg-opacity-100 navbar-bg">
       <div className="flex container lg:py-4 p-0 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link href={"https://github.com/SaiMani30"} className="hidden md:block">
-          <img src="/images/logo.png" alt="Your Logo" className="h-15 md:h-16" />
+          <Image
+            src="/images/logo.png" // Provide the correct path to your logo image
+            alt="Your Logo"
+            width={100} // Set the width of your logo
+            height={40} // Set the height of your logo
+          />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

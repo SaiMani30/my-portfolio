@@ -6,7 +6,6 @@ const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [emailData, setEmailData] = useState({
     senderEmail: '', // Add senderEmail field
-    email: '',
     subject: '',
     message: '',
   });
@@ -14,7 +13,7 @@ const EmailSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const endpoint = 'http://localhost:3000/send'; // Set it to the correct server endpoint
+    const endpoint = 'YOUR_SERVER_ENDPOINT'; // Set it to the correct server endpoint (e.g., '/send' for the same domain)
 
     const options = {
       method: 'POST',
@@ -49,7 +48,7 @@ const EmailSection = () => {
       <div className="contact-info col-span-1">
         <h2 className="text-2xl font-bold">Contact Us</h2>
         <p className="text-[#ADB7BE] mb-4">
-          I'm currently looking for new opportunities, and my inbox is always open. Whether you have a question or just want to connect, feel free to send me a message. I'll do my best to get back to you!
+          I&apos;m currently looking for new opportunities, and my inbox is always open. Whether you have a question or just want to connect, feel free to send me a message. I&apos;ll do my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-4 items-center mb-4">
           <a href="https://github.com/SaiMani30" target="_blank" rel="noopener noreferrer" className="text-white">
@@ -63,7 +62,7 @@ const EmailSection = () => {
       
       <form
         className="email-form col-span-1"
-        action="/send"
+        action="YOUR_SERVER_ENDPOINT" // Update this to your server endpoint
         method="POST"
         onSubmit={handleSubmit}
       >

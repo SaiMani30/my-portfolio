@@ -52,7 +52,7 @@ const AchievementsSection = () => {
     };
 
     animateNumbers();
-  }, []);
+  }, [animatedValues]); // Add animatedValues as a dependency
 
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -64,9 +64,7 @@ const AchievementsSection = () => {
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
-                {achievement.prefix}
-                {animatedValues[index]}
-                {achievement.postfix}
+                {animatedValues[index]} {achievement.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
             </div>
