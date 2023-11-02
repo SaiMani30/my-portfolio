@@ -34,7 +34,8 @@ const AchievementsSection = () => {
 
     const animateNumbers = () => {
       const startTime = Date.now();
-      const interval = setInterval(() => {
+
+      const updateValues = () => {
         const currentTime = Date.now();
         const progress = Math.min(1, (currentTime - startTime) / animationDuration);
 
@@ -45,14 +46,16 @@ const AchievementsSection = () => {
 
         setAnimatedValues(newValues);
 
-        if (progress >= 1) {
-          clearInterval(interval);
+        if (progress < 1) {
+          requestAnimationFrame(updateValues);
         }
-      }, 16); // Update the numbers roughly every 16ms (60 FPS)
+      };
+
+      requestAnimationFrame(updateValues);
     };
 
     animateNumbers();
-  }, [animatedValues]); // Add animatedValues as a dependency
+  }, []); // No dependencies needed
 
   return (
     <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -64,7 +67,7 @@ const AchievementsSection = () => {
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
-                {animatedValues[index]} {achievement.postfix}
+                {animatedValues[index]}&nbsp;{achievement.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
             </div>
