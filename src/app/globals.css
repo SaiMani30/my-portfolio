@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 20, 5, 48; /* Set to RGB values for #140530 color */
-  --background-start-rgb: 20, 5, 48; /* Set to RGB values for #140530 color */
-  --background-end-rgb: 20, 5, 48; /* Set to RGB values for #140530 color */
+  --foreground-rgb: 17, 7, 31; /* Set to RGB values for #11071F color */
+  --background-start-rgb: 17, 7, 31; /* Set to RGB values for #11071F color */
+  --background-end-rgb: 17, 7, 31; /* Set to RGB values for #11071F color */
 }
 
 body {
@@ -21,4 +21,3 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-
