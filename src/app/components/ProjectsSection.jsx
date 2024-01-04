@@ -18,7 +18,7 @@ const projectsData = [
     id: 2,
     title: "Farm Fresh Landing Page",
     description: "Landing page for company promotions",
-    image: "/images/projects/2.png",
+    image: "/images/projects/2.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/SaiMani30/CodeClause_Landing_page-.git",
     previewUrl: "/",
@@ -36,7 +36,7 @@ const projectsData = [
     id: 4,
     title: "Pizza Ordering Website",
     description: "Pizza ordering website using Full-stack",
-    image: "/images/projects/4.png",
+    image: "/images/projects/4.webp",
     tag: ["All", "Ongoing"],
     gitUrl: "/",
     previewUrl: "/",
@@ -54,7 +54,7 @@ const projectsData = [
     id: 6,
     title: "To-do list",
     description: "Basic To-Do list",
-    image: "/images/projects/6.png",
+    image: "/images/projects/6.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/SaiMani30/internpe_to_do_list.git",
     previewUrl: "/",
@@ -63,7 +63,7 @@ const projectsData = [
   id: 7,
     title: "Calculator",
     description: "Basic Calculator using Js functions",
-    image: "/images/projects/7.png",
+    image: "/images/projects/7.jpeg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/SaiMani30/internpe_calculator.git",
     previewUrl: "/",
@@ -72,15 +72,20 @@ const projectsData = [
     id: 8,
       title: "Temperature Converter",
       description: "Basic Temp converter using Js functions",
-      image: "/images/projects/8.png",
+      image: "/images/projects/8.jpg",
       tag: ["All", "Web"],
       gitUrl: "https://github.com/SaiMani30/Bharat-Intern_temperature_convertor.git",
       previewUrl: "/",
     },
-
-
-
-
+    {
+      id: 8,
+        title: "Blog Page",
+        description: "Blog Page using React,Tailwind and Sanity",
+        image: "/images/projects/9.png",
+        tag: ["All", "Web"],
+        gitUrl: "https://github.com/SaiMani30/bloggersyt.git",
+        previewUrl: "/",
+      },
 ];
 
 const ProjectsSection = () => {
@@ -103,7 +108,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-4xl font-bold mt-4 mb-8 md:mb-12" style={{ background: 'linear-gradient(90deg, #0ea5ea, #0bd1d1 51%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
@@ -136,7 +141,9 @@ const ProjectsSection = () => {
               key={project.id}
               title={project.title}
               description={project.description}
+              // Apply inline styles for responsive images
               imgUrl={project.image}
+              style={{ maxWidth: "100%", height: "auto" }}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />

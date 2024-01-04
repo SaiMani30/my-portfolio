@@ -12,6 +12,16 @@ const navLinks = [
     path: "#about",
   },
   {
+    title: "Blogs",
+    path: "https://mytechblog.vercel.app/",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
+  {
+    title:"Notes",
+    path:"#notes",
+  },
+  {
     title: "Projects",
     path: "#projects",
   },
@@ -32,7 +42,7 @@ const Navbar = () => {
             src="/images/logo.png" // Provide the correct path to your logo image
             alt="Your Logo"
             width={100} // Set the width of your logo
-            height={40} // Set the height of your logo
+            height={30} // Set the height of your logo
           />
         </Link>
         <div className="mobile-menu block md:hidden">

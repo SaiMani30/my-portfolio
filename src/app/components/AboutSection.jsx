@@ -9,6 +9,7 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        
         <li>Node.js</li>
         <li>Express</li>
         <li>SQL</li>
@@ -77,14 +78,16 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={1500} height={1500} alt="about image" />
+      <div className="md:grid md:grid-cols-2 gap-8 items- py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <Image src="/images/about-image.png" width={2000} height={2000} alt="about image" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+        <h2 className="text-4xl font-bold mb-4" style={{ background: 'linear-gradient(90deg, #0ea5ea, #0bd1d1 51%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>About Me</h2>
+
+          
           <p className="text-base lg:text-lg">
           I am a passionate and analytical fresher with a strong interest in web development and data science, aiming to leverage my skills and knowledge to create innovative and impactful solutions for complex problems. 
 
-          I have also gained hands-on experience in full-stack web development, working as a web developer at AISoC, and worked as intern in some startups where I am involved in building and maintaining web applications using various technologies and frameworks, such as HTML,CSS, and JavaScript. Additionally, I am a core member of JITSIE, IIT Madras, a society for innovation and entrepreneurship, where I collaborate with other students and faculty to develop and implement projects related to artificial intelligence, machine learning, and data science. I have also completed a certification course from Coding Ninjas, where I acquired proficiency in Python, and Java. Some of the skills that I possess and want to further develop are problem solving, communication, computer science, and data analysis. My goal is to find an entry-level position that allows me to apply and enhance my skills and knowledge, and to contribute to the advancement of web development and data science.
+          I have also gained hands-on experience in full-stack web development, working as a web developer at AISoC, and worked as intern in some startups where I am involved in building and maintaining web applications using HTML,CSS, and JavaScript. Additionally, I am a core member of JITSIE, IIT Madras, a society for innovation and entrepreneurship, where I collaborate with other students and faculty to develop and implement projects related to artificial intelligence, machine learning, and data science. I have also completed a certification course from Coding Ninjas, where I acquired proficiency in Python, and Java. Some of the skills that I possess and want to further develop are problem solving, communication, and data analysis. My goal is to find an entry-level position that allows me to apply and enhance my skills and knowledge, and to contribute to the advancement of web development and data science.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
